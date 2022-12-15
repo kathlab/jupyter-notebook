@@ -1,0 +1,18 @@
+channels:
+  - defaults
+  - pytorch
+  - nvidia # only for cuda
+  - conda-forge # tensorflow
+dependencies:
+  #- cuda>=11.7
+  - cudatoolkit>=11.7 # tensorflow
+  - cudnn>=8.1.0 # tensorflow
+  - notebook
+  - python>=3.9 # >=3.10 introduces problems with libgcc-ng deps
+  - libgcc-ng>=11.2.0 # pytorch
+  - pytorch-cuda=11.7
+  - torchaudio
+  - torchvision
+  - pip
+  - pip: # add if you'd like to install packages in pip
+    - tensorflow

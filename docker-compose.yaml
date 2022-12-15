@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  juno:
+    image: local/jupyternotebook:latest
+    container_name: jupyternotebook
+    command: /miniconda/envs/juno/bin/jupyter notebook --allow-root --port=8888 --ip 0.0.0.0 --no-browser
+    ports: # Host:Container
+      - "8888:8888" # Jupyter Notebook
+    volumes:
+      - type: bind
+        source: ./notebooks
+        target: /notebooks
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+volumes:
+  juno:
