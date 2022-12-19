@@ -37,3 +37,7 @@ RUN ${CONDADIR}/bin/conda update python
 
 # change workdir to make notebooks browsable in jupyter notebooks
 WORKDIR /notebooks
+
+# volumes
+VOLUME [ "/notebooks" ]
+VOLUME [ "/workspace" ]

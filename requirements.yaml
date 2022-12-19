@@ -4,15 +4,17 @@ channels:
   - nvidia # only for cuda
   - conda-forge # tensorflow
 dependencies:
-  #- cuda>=11.7
-  - cudatoolkit>=11.7 # tensorflow
-  - cudnn>=8.1.0 # tensorflow
+  - cudatoolkit #>=11.7 # tensorflow
+  - cudnn #>=8.1.0 # tensorflow
   - notebook
-  - python>=3.9 # >=3.10 introduces problems with libgcc-ng deps
-  - libgcc-ng>=11.2.0 # pytorch
-  - pytorch-cuda=11.7
+  - python #>=3.9 # >=3.10 introduces problems with libgcc-ng deps
+  - libgcc-ng #>=11.2.0 # pytorch
+  - pytorch-cuda #=11.7
   - torchaudio
   - torchvision
+  - ipython # vscode
+  - ipykernel # vscode
+  - pandas # vscode
   - pip
   - pip: # add if you'd like to install packages in pip
-    - tensorflow
+    - tensorflow # install latest version from pip
