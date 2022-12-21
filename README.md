@@ -1,5 +1,5 @@
 # jupyter-notebook
-Dockerized jupyter notebook with GPU support.
+Dockerized jupyter notebook with VS Code and CUDA support.
 
 build docker image:
 --
