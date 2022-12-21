@@ -36,7 +36,7 @@ SHELL [ "conda", "run", "-n", "juno", "/bin/bash", "--login", "-c" ]
 RUN ${CONDADIR}/bin/conda update python
 
 # change workdir to make notebooks browsable in jupyter notebooks
-WORKDIR /notebooks
+WORKDIR /workspace
 
 # volumes
 VOLUME [ "/notebooks" ]

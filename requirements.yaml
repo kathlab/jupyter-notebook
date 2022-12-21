@@ -1,3 +1,4 @@
+name: juno
 channels:
   - defaults
   - pytorch
@@ -8,7 +9,7 @@ dependencies:
   - cudnn #>=8.1.0 # tensorflow
   - notebook
   - python #>=3.9 # >=3.10 introduces problems with libgcc-ng deps
-  - libgcc-ng #>=11.2.0 # pytorch
+  #- libgcc-ng #>=11.2.0 # pytorch
   - pytorch-cuda #=11.7
   - torchaudio
   - torchvision
@@ -17,4 +18,4 @@ dependencies:
   - pandas # vscode
   - pip
   - pip: # add if you'd like to install packages in pip
-    - tensorflow # install latest version from pip
+    - tensorflow # install latest version via pip

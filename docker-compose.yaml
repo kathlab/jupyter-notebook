@@ -4,6 +4,7 @@ services:
     image: local/jupyternotebook:latest
     container_name: jupyternotebook
     command: /miniconda/envs/juno/bin/jupyter notebook --allow-root --port=8888 --ip 0.0.0.0 --no-browser
+    # command: /bin/sh -c "while sleep 1000; do :; done" # keep container open while running
     ports: # Host:Container
       - "8888:8888" # Jupyter Notebook
     volumes:
